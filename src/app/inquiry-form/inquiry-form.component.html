@@ -1,0 +1,359 @@
+<h2>Inquiry</h2>
+<!-- first Section -->
+<div id="outside-container">
+    <div class="divider">
+        Inquiry Saldo
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Nomor Rekening</div>
+            <div class="column-inside-row">
+                <input type="text" [(ngModel)]="accountNumber" name="" id="">
+            </div>
+        </div>
+        <div class="inside-row" id="container-button">
+            <input type="submit" value="Kirim" (click)="getData()" />
+            <button disabled="true" id="btn-cetak" (click)="cetak()">Cetak</button>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Nama</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{LegderBalance}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Mata Uang</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{CurrencyCode}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row"></div>
+    </div>
+
+    <!-- second section -->
+
+    <div class="divider">
+        <div class="column-inside-divider">Status</div>
+        <div class="column-inside-divider">Aktivitas</div>
+        <div class="column-inside-divider">Saldo</div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Cabang Pemilik Rekening</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{BranchCode}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Account Type</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{AccountType}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Transaksi Hari Ini</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="">
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Transaksi Hari Esok</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="">
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Saldo G/L</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{LegderBalance}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Aktivitas</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{Activity}}>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">OD Plan</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{OverDraftPlan}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Status Buka</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{OpenIndicator}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row"></div>
+            <div class="column-inside-row">
+                -----------------
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Jumlah</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{TotalAmount}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Saldo</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{CurrentBalance}}>
+            </div>
+        </div>
+        <div class="inside-row"></div>
+    </div>
+
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Post Indikator</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="">
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Stop Bayar</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{StopIndicator}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Float Kemarin</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{OnlineFloatYesterday}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Float S/D</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{OnlineFloat}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Plafon</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{HoldsIndicator}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Blokir</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Periode R/K</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{StatementCycle}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Dormant/NonAK</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{DormantIndicator}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Float N/D</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{FloatEnteredOnline}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Periode Bunga</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{InterestCycle}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row"></div>
+        <div class="inside-row">
+            <div class="column-inside-row">Float</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{FloatAmount}}>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">User Code</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{UserCode}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">R/K Gabungan</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{CombineStatementIndicator}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Periode Bunga Pinjaman</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{InterestCycle}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Status OD</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{OverdraftLimit}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Penalti</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{Penalty}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Saldo Siap</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{AvailableBalance}}>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Pejabat</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{Officers}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Buku</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{PassbookIndicator}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Tanggal Buka</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{OpeningDate}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Aktivitas Akhir</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{LastActive}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Koreksi Akrual Pinjaman</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{AccruedInterest}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Akrual</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled=true value={{AccrualAmount}}>
+            </div>
+        </div>
+    </div>
+
+    <div class="single-row">
+        <div class="column-inside-row">Transaksi Tanpa Buku</div>
+        <div class="column-inside-row">
+            <input type="text" name="" id="" disabled="true" value={{UnpostedBookNumber}}>
+        </div>
+    </div>
+    <div class="single-row">
+        <div class="column-inside-row">Status Lain</div>
+        <div class="column-inside-row">
+            <input type="text" name="" id="" disabled="true" value={{MiscellaneousStatus}}>
+        </div>
+    </div>
+    <div class="single-row">
+        <div class="column-inside-row">Akrual Pinjaman</div>
+        <div class="column-inside-row">
+            <input type="text" name="" id="">
+        </div>
+    </div>
+
+    <div class="double-row">Informasi Buku</div>
+    <div class="single-row">
+        <div class="column-inside-row">Bunga Tahun Ini</div>
+        <div class="column-inside-row">
+            <input type="text" name="" id="" disabled="true" value={{InterestPaidYearToDate}}>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Nomor Seri</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{PassbookSerialNumber}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Baris</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{Line}}>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Halaman</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{Page}}>
+            </div>
+        </div>
+        <div class="inside-row">
+            <div class="column-inside-row">Saldo Buku</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{CloseBalance}}>
+            </div>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="inside-row">
+            <div class="column-inside-row">Pajak</div>
+            <div class="column-inside-row">
+                <input type="text" name="" id="" disabled="true" value={{TaxClose}}>
+            </div>
+        </div>
+        <div class="inside-row"></div>
+    </div>
+</div>
